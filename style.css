@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #1e3a8a; /* Dark blue */
+    --secondary-color: #2563eb;
+    --text-color: #f8fafc;
+    --bg-color: #0f172a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(30, 58, 138, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.header h1 i {
+    color: #e1306c; /* Instagram color */
+    margin-right: 10px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: var(--text-color);
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-box input:focus {
+    border-color: var(--secondary-color);
+}
+
+.input-box button {
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.input-box button:hover {
+    background-color: #1d4ed8;
+}
+
+.input-box button i {
+    margin-right: 8px;
+}
+
+.result {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e293b;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.result a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #10b981;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.result a:hover {
+    background-color: #059669;
+}
+
+.loader {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--secondary-color);
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .input-box {
+        flex-direction: column;
+    }
+    
+    .input-box button {
+        width: 100%;
+    }
+      }
